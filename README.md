@@ -4,4 +4,6 @@
 ## 题目列表
 1.[两数之和](https://github.com/ByMySide0527/LeetCode/blob/master/notes/q%26a1%20%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.md)  
 2.[两数相加](https://github.com/ByMySide0527/LeetCode/blob/master/notes/q%26a2%20%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0.md)
-<br/><br/>![晨星闪闪，你发光的样子](https://github.com/ByMySide0527/LeetCode/blob/master/images/20180509103103_cfmar.png)
+<br/>  
+<br/>
+![晨星闪闪，你发光的样子](https://github.com/ByMySide0527/LeetCode/blob/master/images/20180509103103_cfmar.png)
