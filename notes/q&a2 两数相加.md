@@ -17,7 +17,57 @@
 |l1=[]<br/>l2=[0,1]|当一个列表为空时，即出现空列表。|
 |l1=[9,9]<br/>l2=[1]|求和运算最后可能出现额外的进位，这一点很容易被遗忘| 
 <br/>  
+  
+## 伪代码  
+<ul>
+<li>将当前结点初始化为返回列表的哑结点。</li>
+<li>将进位 carry初始化为 0。</li>
+<li>将p和q分别初始化为列表l1和l2的头部。</li>
+<li>遍历列表l1和l2直至到达它们的尾端
+  <ul>
+    <li>将x设为结点p的值。如果p已经到达l1的末尾，则将其值设置为0。</li>
+    <li>将y设为结点q的值。如果q已经到达l2的末尾，则将其值设置为0</li>
+    <li>设定 sum = x + y + carry。</li>
+    <li>更新进位的值，carry = sum/10。</li>
+    <li>创建一个数值为(sum mod 10) 的新结点，并将其设置为当前结点的下一个结点，然后将当前结点前进到下一个结点。</li>
+    <li>同时，将p和q前进到下一个结点</li>
+  </ul>
+ </li>
+<li>检查 carry = 1是否成立，如果成立，则向返回列表追加一个含有数字1新结点</li>
+<li>返回哑节点的下一节点</li>
+</ul>  
 
 ## 自己解题：  
 ```
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
+var addTwoNumbers = function(l1, l2) {
+    var p=l1;
+    var q=l2;
+    var num=0;
+    var l3 = new ListNode(0);
+    var l4=l3;
+    while(p||q){
+        var a = p?p.val:0;
+        var b = q?q.val:0;
+        l4.next=new ListNode((a+b+num)%10);
+        num = parseInt((a+b+num)/10);
+        if(p) p=p.next;
+        if(q) q=q.next;
+        l4=l4.next;
+    }
+    if(num)
+        l4.next=new ListNode(num);
+    return l3.next;
+};
 ```
