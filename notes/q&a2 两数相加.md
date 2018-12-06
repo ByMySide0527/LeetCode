@@ -70,4 +70,144 @@ var addTwoNumbers = function(l1, l2) {
         l4.next=new ListNode(num);
     return l3.next;
 };
+```  
+## 关于链表  
+### 什么是链表  
+要存储多个元素，数组可能是最常用的数据结构。这种数据结构非常方便，但是有一个缺点：从数组的起点或者中间插入或移除项的成本非常高，因为需要移动元素（比如你插入一个元素后面的所有的元素都移动了“位置”）。
+
+链表存储有序的元素集合，但是不同于数组，链表中的元素在内存中并不是连续放置的。每个元素都是由一个存储元素本身的节点和一个指向下一元素的引用（也叫指针或者链接）组成。  
+
+相比于数组来说，链表的好处在于添加或者删除元素的时候不需要移动其他元素。但是操作链表需要使用指针。数组的一个优点是可以直接访问任何位置的任何元素，但是要是想访问链表中的某一元素，则是必须从起点开始迭代直到找到目标元素。  
+### 链表的学习  
+创建一个链表  
+
+```
+function LinkedList() {
+    var Node = function(element) {
+        this.element = element;
+        this.next = null;
+    }
+
+    //各种方法
+}
+```
+
+Node表示要加入列表的项，它包含一个element属性以及一个next属性，element表示要添加到列表的值，next表示指向列表下一个节点项的指针。  
+#### 当一个Node元素被创建时，它的next指针总是null  
+<ul><li>向链表尾部追加元素</li></ul>  
+列表为空，添加的是第一个元素。列表不为空，向其追加元素。  
+#### 要循环访问列表中的所有元素，就需要有一个起点，就是head
+
+```
+this.append = function(element) {
+    var node = new Node(element), //传入值创建Node项
+        current;
+
+    if(head === null) { //如果为空链表
+        head = node; //设置node为head（head为第一个节点的引用）
+    } else {
+        current = head; //从表头开始
+        while(current.next) { 
+            //循环列表，找到最后一项（列表最后一个节点的下一个元素始终是null）
+            current = current.next;
+        }
+        //使当前最后一项的指针指向node
+        current.next = node;
+    }
+    length++; //更新列表长度
+};
+```
+使用append  
+```
+var list = new LinkedList();
+list.append(15);
+list.append(10);
+```  
+
+<ul><li>从链表移除元素</li></ul>  
+输入位置，从特定位置移除一个元素  
+
+```
+this.removeAt = function(position) {
+    if(position > -1 && position < length) { //有效性检测
+        var current = head, //用current来循环列表
+        previous,
+        index = 0;
+
+        if(position === 0) {
+            head = current.next; //移除第一个元素，直接把head指向下一个元素
+        } else {
+            while(index++ < position) { //循环列表找到满足条件的那个元素
+                previous = current; //
+                current = current.next; //把下一个变量覆给current
+            }
+            //跳过current，将当前要移除的元素的上一个与下一项直接连接起来。
+            previous.next = current.next;
+        }
+        length --;
+        return current.element;
+    } else {
+        return null;
+    }
+}
+```  
+
+在任意位置插入一个元素  
+
+```
+this.insert = function (position, element) {
+    if(position >= 0 && position <= length) {
+        var node = new Node(element),
+            current = head; //通过current从head位置开始迭代
+            previous,
+            index = 0;
+
+        if(position === 0) { //第一个位置
+            node.next = current; //此时current = head,指向head那么node就成了第一个
+            head = node; //node指向为head
+        } else {
+            while (index++ < position ) { //循环迭代到目标位置
+                previous = current; 
+                current = current.next;
+            }
+
+            node.next = current; // node的下一个为current
+            previous.next = node; // node的上一个位置为previous
+        }
+        length++;
+        return true;
+    } else {
+        return false;
+    }
+}
+```  
+
+把LinkedList对象转换成一个字符串。  
+
+```
+this.toString = function() {
+    var current = head,
+        string = '';
+    while(current) { //循环访问列表
+        string += current.element + (current.next ? '\n' : '');
+        current = current.next;
+    }
+    return string; //返回字符串
+}
+```
+返回元素的位置  
+
+```
+this.indexOf = function(element) {
+    var current = head,
+        index = 0;
+    while(current) {
+        if(element === current.element) {
+            return index; //找到返回当前位置
+        }
+        index ++;
+        current = current.next;
+    }
+    return -1;    //找不到返回-1
+}  
 ```
