@@ -38,7 +38,7 @@
 </ul>  
 
 ## 自己解题：  
-```
+``` javascript
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {
@@ -81,7 +81,7 @@ var addTwoNumbers = function(l1, l2) {
 ### 链表的学习  
 创建一个链表  
 
-```
+``` javascript
 function LinkedList() {
     var Node = function(element) {
         this.element = element;
@@ -98,7 +98,7 @@ Node表示要加入列表的项，它包含一个element属性以及一个next�
 列表为空，添加的是第一个元素。列表不为空，向其追加元素。  
 #### 要循环访问列表中的所有元素，就需要有一个起点，就是head
 
-```
+``` javascript
 this.append = function(element) {
     var node = new Node(element), //传入值创建Node项
         current;
@@ -118,7 +118,7 @@ this.append = function(element) {
 };
 ```
 使用append  
-```
+``` javascript
 var list = new LinkedList();
 list.append(15);
 list.append(10);
@@ -127,7 +127,7 @@ list.append(10);
 <ul><li>从链表移除元素</li></ul>  
 输入位置，从特定位置移除一个元素  
 
-```
+``` javascript
 this.removeAt = function(position) {
     if(position > -1 && position < length) { //有效性检测
         var current = head, //用current来循环列表
@@ -154,7 +154,7 @@ this.removeAt = function(position) {
 
 在任意位置插入一个元素  
 
-```
+``` javascript
 this.insert = function (position, element) {
     if(position >= 0 && position <= length) {
         var node = new Node(element),
@@ -184,7 +184,7 @@ this.insert = function (position, element) {
 
 把LinkedList对象转换成一个字符串。  
 
-```
+``` javascript
 this.toString = function() {
     var current = head,
         string = '';
@@ -197,7 +197,7 @@ this.toString = function() {
 ```
 返回元素的位置  
 
-```
+``` javascript
 this.indexOf = function(element) {
     var current = head,
         index = 0;
