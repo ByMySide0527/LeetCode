@@ -46,7 +46,7 @@ var lengthOfLongestSubstring = function(s) {
 }; 
 ```
 ## 心得  
-<ul><li>Javascript中Math.max.apply和Math.max的区别</li></ul>  
+### Javascript中Math.max.apply和Math.max的区别
 Javascript中的Math.max方法可以求出给定参数中最大的数。  
 
 ```
@@ -79,7 +79,7 @@ argArray
 > Math.min.apply(null, [1,0,-1])
 < -1
 ```  
-#### apply()与call()的区别  
+### apply()与call()的区别  
 JavaScript中的每一个Function对象都有一个apply()方法和一个call()方法，它们的语法分别为：  
 
 ```
