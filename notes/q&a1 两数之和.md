@@ -12,7 +12,7 @@
 ### 自己解题  
 #### 暴力法  
 暴力法很简单。遍历每个元素 *x* ，并查找是否存在一个值与 *target - x* 相等的目标元素。  
-```  
+``` javascript  
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -29,7 +29,7 @@ var twoSum = function(nums, target) {
 };  
 ```  
 ### 方法二（只用一遍循环，多一次判断，耗时少）  
-```  
+``` javascript  
 /**
  * @param {number[]} nums
  * @param {number} target
