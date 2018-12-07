@@ -3,7 +3,7 @@
   
   
 ## 示例1：  
-```
+``` 
 输入: "abcabcbb"
 输出: 3 
 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
@@ -23,7 +23,7 @@
 ```  
 ### 自己解题  
 #### 暴力法    
-```  
+``` javascript 
 /**
  * @param {string} s
  * @return {number}
@@ -49,7 +49,7 @@ var lengthOfLongestSubstring = function(s) {
 ### Javascript中Math.max.apply和Math.max的区别
 Javascript中的Math.max方法可以求出给定参数中最大的数。  
 
-```
+``` javascript
 > Math.max('1','2','3.1','3.2')
 < 3.2
 > Math.min(1,0,-1)
@@ -59,7 +59,7 @@ Javascript中的Math.max方法可以求出给定参数中最大的数。
 但如果是数组，就不能这样调用了。  
 此时就用到了apply方法： 
 
-```
+``` javascript
 apply 方法 (Function) (JavaScript)
 
 调用函数，并用指定对象替换函数的this ，同时用指定数组替换函数的参数。
@@ -73,7 +73,7 @@ argArray
 ```  
 巧妙地使数组也可以调用Math.max和Math.min。 
 
-```
+``` javascript
 > Math.max.apply(null, ['1','2','3.1','3.2'])
 < 3.2
 > Math.min.apply(null, [1,0,-1])
@@ -82,7 +82,7 @@ argArray
 ### apply()与call()的区别  
 JavaScript中的每一个Function对象都有一个apply()方法和一个call()方法，它们的语法分别为：  
 
-```
+``` javascript
 /*apply()方法*/
 function.apply(thisObj[, argArray])
 
