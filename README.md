@@ -25,7 +25,7 @@
 | 27  |      [移除数组](https://github.com/kelosun/LeetCode/blob/master/notes/q%2627%20%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0.md)      |
 | 80| [删除排序数组中的重复项 Ⅱ](https://github.com/kelosun/LeetCode/blob/master/notes/q%2680%20%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9%20II.md) |
 | 189| [旋转数组](https://github.com/kelosun/LeetCode/blob/master/notes/q%26a%20189%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84.md) |
-| 299| [猜数字游戏](https://github.com/kelosun/LeetCode/blob/master/notes/q%26a%20189%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84.md) |
+| 299| [猜数字游戏](https://github.com/kelosun/LeetCode/blob/master/notes/q%26a%20299%20%E7%8C%9C%E6%95%B0%E5%AD%97%E6%B8%B8%E6%88%8F.md) |
 | 326 |    [3的幂](https://github.com/kelosun/LeetCode/blob/master/notes/q%26a326%203%E7%9A%84%E5%B9%82.md)    |
 | 367 | [有效的完全平方数](https://github.com/kelosun/LeetCode/blob/master/notes/q%26a367%20%E6%9C%89%E6%95%88%E7%9A%84%E5%AE%8C%E5%85%A8%E5%B9%B3%E6%96%B9%E6%95%B0.md) |
 
